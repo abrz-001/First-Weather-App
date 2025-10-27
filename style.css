@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #222;
+    /* Center the new, wider dashboard on the page */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+/* --- REPLACES THE OLD .card STYLE --- */
+.dashboard-container {
+    width: 100%;
+    max-width: 1920px; /* Much wider than the old 470px */
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    
+    /* This creates the 2-column layout */
+    display: flex;
+}
+
+/* --- NEW: Sidebar (Column 1) Styles --- */
+.sidebar {
+    flex: 1; /* Takes 1 part of the width */
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* --- NEW: Main Content (Column 2) Styles --- */
+.main-content {
+    flex: 4; /* Takes 2 parts of the width, making it wider */
+    padding-left: 30px;
+    text-align: center;
+}
+
+
+/* --- UPDATED STYLES (MOSTLY LARGER) --- */
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px; /* Slightly larger */
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #d4fff7;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather-icon {
+    width: 200px; /* Increased size */
+    margin-top: 20px; /* Reduced top margin a bit */
+}
+
+.weather h1 {
+    font-size: 100px; /* Increased size */
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 55px; /* Increased size */
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Use space-around for more room */
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 50px; /* Increased size */
+    margin-right: 15px; /* Increased size */
+}
+
+.humidity,.wind {
+    font-size: 32px; /* Increased size */
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 16px; /* Increased size */
+    margin-top: 10px;
+    display: none;
+}
+
+
+/* --- HISTORY & FORECAST STYLES (Minor changes) --- */
+
+.history-container {
+    margin-top: 30px; /* More spacing */
+    text-align: left;
+}
+
+.history-container h3 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#history-list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+#history-list li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#clear-history-btn {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #5b548a;
+    padding: 12px 22px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    width: 100%; /* Make button full-width of sidebar */
+}
+
+#clear-history-btn:hover {
+    background: #d4fff7;
+}
+
+.forecast-container {
+    margin-top: 40px;
+    display: none; 
+}
+
+.forecast-container h2 {
+    font-size: 28px; /* Increased size */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 15px; /* More padding */
+    border-radius: 15px; 
+    width: calc(20% - 10px); 
+    min-width: 110px; /* Increased min-width */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forecast-card img {
+    width: 60px; /* Increased size */
+    margin-bottom: 10px;
+}
+
+.forecast-card p {
+    font-size: 16px; /* Increased size */
+    margin: 2px 0;
+}
+
+.forecast-date {
+    font-weight: 600;
+    font-size: 15px; /* Increased size */
+}
+
+.forecast-temp {
+    font-size: 20px; /* Increased size */
+    font-weight: 500;
+}
