@@ -95,7 +95,7 @@ function saveToHistory(city) {
     history.unshift(city);
     
     // Keep history list to a reasonable size (e.g., 10 items)
-    if (history.length > 3) {
+    if (history.length > 10) {
         history.pop();
     }
 
