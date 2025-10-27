@@ -17,8 +17,8 @@ body {
 
 /* --- REPLACES THE OLD .card STYLE --- */
 .dashboard-container {
-    width: 100%;
-    max-width: 1920px; /* Much wider than the old 470px */
+    width: 90%;
+    max-width: 1000px; /* Much wider than the old 470px */
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
     border-radius: 20px;
@@ -37,7 +37,7 @@ body {
 
 /* --- NEW: Main Content (Column 2) Styles --- */
 .main-content {
-    flex: 4; /* Takes 2 parts of the width, making it wider */
+    flex: 2; /* Takes 2 parts of the width, making it wider */
     padding-left: 30px;
     text-align: center;
 }
