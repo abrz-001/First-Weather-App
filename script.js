@@ -1,4 +1,4 @@
-const apiKey = "Enter your API Key here";
+const apiKey = "047b0776a2054b763a68d63566beab61";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 // NEW: API endpoint for 5-day forecast [Req 41]
 const forecastApiUrl = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
