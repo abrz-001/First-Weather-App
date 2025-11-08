@@ -3,7 +3,6 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 // NEW: API endpoint for 5-day forecast [Req 41]
 const forecastApiUrl = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
 
-// Existing selectors
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
@@ -29,15 +28,15 @@ function showWeather() {
 
 // Helper function to get weather icon path
 function getWeatherIconPath(weatherMain) {
-    if (weatherMain == "Clouds") {
+    if (weatherMain === "Clouds") {
         return "images/clouds.png";
-    } else if (weatherMain == "Clear") {
+    } else if (weatherMain === "Clear") {
         return "images/clear.png";
-    } else if (weatherMain == "Rain") {
+    } else if (weatherMain === "Rain") {
         return "images/rain.png";
-    } else if (weatherMain == "Drizzle") {
+    } else if (weatherMain === "Drizzle") {
         return "images/drizzle.png";
-    } else if (weatherMain == "Mist") {
+    } else if (weatherMain === "Mist") {
         return "images/mist.png";
     } else {
         // Default icon if condition is not matched (e.g., Snow, Haze)
